@@ -20,6 +20,7 @@
         background-color: $dark;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, .25);
         padding: 15px;
+        opacity:0.85;
         cursor: pointer;
         transition: 0.3s transform;
         img {
@@ -29,8 +30,23 @@
             transform: translate(-15px, -15px);
         }
         &_selected {
-            box-shadow: 0 5px 20px $main-color;
+            // box-shadow: 0 5px 15px #ca6477;
             transform: translateY(-8px);
+            opacity:1;
+        }
+        &-enter {
+            opacity: 0;
+        }
+        &-enter-active {
+            opacity: 1;
+            transition: opacity 500ms ease-in;
+        }
+        &-exit {
+            opacity: 1;
+        }
+        &-exit-active {
+            opacity: 0;
+            transition: opacity 500ms ease-in;
         }
     }
     &__name {
